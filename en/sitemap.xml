@@ -32,16 +32,6 @@
   
   <url>
     <loc>/en/docs/getting-started/tabs/fermentable/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/docs/getting-started/tabs/fermentable/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/docs/getting-started/tabs/fermentable/"
-                />
   </url>
   
   <url>
@@ -105,16 +95,6 @@
   <url>
     <loc>/en/docs/tutorials/multi-bear/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/docs/tutorials/multi-bear/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/docs/tutorials/multi-bear/"
-                />
   </url>
   
   <url>
@@ -164,16 +144,6 @@
   <url>
     <loc>/en/docs/tutorials/tutorial2/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/docs/tutorials/tutorial2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/docs/tutorials/tutorial2/"
-                />
   </url>
   
   <url>
@@ -281,16 +251,6 @@
   <url>
     <loc>/en/docs/reference/parameter-reference/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/docs/reference/parameter-reference/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/docs/reference/parameter-reference/"
-                />
   </url>
   
   <url>
