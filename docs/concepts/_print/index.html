@@ -60,7 +60,28 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="td-section">
     <header>
@@ -170,6 +191,22 @@ if (!doNotTrack) {
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-7bca1e8be7c924f0e7093d07f465bdb0">初始比重</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-bfe847a9503366661cfd49616f667dae">终点比重</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -188,6 +225,101 @@ if (!doNotTrack) {
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-7bca1e8be7c924f0e7093d07f465bdb0">1 - 初始比重</h1>
+    <div class="lead">“初始比重”介绍。</div>
+	<h2 id="初始比重orginal-gravity">初始比重(Orginal Gravity)</h2>
+<p>初始比重用来衡量麦汁中除去水分之外固态物的含量。
+初始比重是指麦汁经过煮沸后，发酵之前的比重。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+初始比重的常用单位可分为两类：
+<strong>固含量</strong>单位，和<strong>密度比</strong>单位。
+<strong>固含量</strong>单位有Balling、Brix和Plato。
+Balling单位历史最长，Brix单位基于Balling单位，修正了原有误差，慢慢淘汰了Balling单位。
+Brix单位的定义是在标准室温、大气压条件下，纯蔗糖溶液中，蔗糖的百分比。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>Brix单位在红酒、水果、软饮领域应用很广。
+Plato单位和Balling单位的定义基本相同，差别是Plato单位的测量条件是20°C，而Balling单位则是在17.5°C。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>三个单位之间的数值差异很小，在日常酿造中可以互换使用。</p>
+<p><strong>密度比</strong>单位实际上是一个无单位量。它是指在标准温度、标准大气压条件（STP，standard temperature and pressure）下待测液体密度和纯水密度的比值。 我们知道纯水的密度为1g/ml，假设麦汁的密度为1.040g/ml, 那么麦汁的密度比即为1.040g/ml：1g/ml = 1.040(约去单位)。</p>
+<p>英国酿酒工业习惯使用密度比单位，例如10 Plato的麦汁用密度单位可以大约表示为1.040。
+1.040。在日常操作中，取小数点后两位，称之为<strong>比重点</strong>(Gravity Point)，例如1.050麦汁的比重点即为50。</p>
+<p>比重点和固含量单位之间的便捷转换方式为：比重点 = 固含量单位 × 4</p>
+<p>这个简易公式存在一定误差，可以在日常酿造需要快速估算的情况下使用。</p>
+<p>本软件目前只支持密度比单位的输入，计算结果输出支持Plato单位。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Oliver, Garrett, and Tom Colicchio. The Oxford Companion to Beer. The Oxford Companion to Beer. Oxford University Press, 2013. &ldquo;Orginal Gravity&rdquo;, <a href="https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133">https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://www.mt.com/gb/en/home/perm-lp/product-organizations/ana/brix-meters.html">https://www.mt.com/gb/en/home/perm-lp/product-organizations/ana/brix-meters.html</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Oliver, Garrett, and Tom Colicchio. The Oxford Companion to Beer. The Oxford Companion to Beer. Oxford University Press, 2013. &ldquo;Plato gravity scale&rdquo;, <a href="https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133">https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133</a>. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-bfe847a9503366661cfd49616f667dae">2 - 终点比重</h1>
+    <div class="lead">“终点比重”介绍。</div>
+	<h2 id="终点比重final-gravity">终点比重(Final Gravity)</h2>
+<p>初始比重用来衡量麦汁中除去水分之外固态物的含量。
+初始比重是指麦汁经过煮沸后，发酵之前的比重。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+初始比重的衡量体系可分为两类：
+<strong>固含量</strong>体系，和<strong>相对密度</strong>体系。
+<strong>固含量</strong>体系有Balling、Brix和Plato单位。
+Balling单位历史最长，诞生于1843年。Brix单位基于Balling单位，修正了原有误差，很快淘汰了Balling单位。
+Brix单位的定义是在标准室温、大气压条件下，纯蔗糖溶液中，蔗糖的质量百分比。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>Brix单位在红酒、水果、软饮领域应用很广。
+Plato单位和Balling单位的定义基本相同，差别是Plato单位的测量条件是20°C，而Balling单位则是在17.5°C。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>三个单位之间的数值差异很小，在日常酿造中可以互换使用。</p>
+<p><strong>相对密度</strong>单位实际上是一个无单位量。它是指在标准温度、标准大气压（STP，standard temperature and pressure）条件下待测液体密度和纯水密度的比值。 我们知道在STP条件下纯水的密度为1g/ml，假设麦汁的密度为1.040g/ml, 那么麦汁的相对密度即为:</p>
+<p>$\dfrac{1.040 g/ml}{1.000 g/ml} = 1.040$ (约去单位)。</p>
+<p>英国酿酒工业习惯使用相对密度单位，例如10 Plato的麦汁用密度单位可以大约表示为1.040。
+1.040。在日常操作中，取小数点后两位，称之为<strong>比重点</strong>(Gravity Point)，例如1.050麦汁的比重点即为50。</p>
+<p>比重点和固含量单位之间的便捷转换方式为：比重点 = 固含量单位 × 4</p>
+<p>这个简易公式存在一定误差，可以在日常酿造需要快速估算的情况下使用。</p>
+<p>本软件目前只支持密度比单位的输入，计算结果输出支持Plato单位。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Oliver, Garrett, and Tom Colicchio. The Oxford Companion to Beer. The Oxford Companion to Beer. Oxford University Press, 2013. &ldquo;Orginal Gravity&rdquo;, <a href="https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133">https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://www.mt.com/gb/en/home/perm-lp/product-organizations/ana/brix-meters.html">https://www.mt.com/gb/en/home/perm-lp/product-organizations/ana/brix-meters.html</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Oliver, Garrett, and Tom Colicchio. The Oxford Companion to Beer. The Oxford Companion to Beer. Oxford University Press, 2013. &ldquo;Plato gravity scale&rdquo;, <a href="https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133">https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133</a>. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+
+    
+	
   
 
 

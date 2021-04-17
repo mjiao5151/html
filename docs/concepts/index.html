@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.80.0" /><link rel="alternate" type="text/html" href="/docs/concepts/_print/">
-<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.80.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,12 +20,18 @@
 <title>概念 | BrewCAD 中文</title><meta property="og:title" content="概念" />
 <meta property="og:description" content="对软件中出现的名称、概念做确切定义和详细的介绍。适合作为用户手册，以备检索。
 " />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/concepts/" />
 <meta property="og:site_name" content="BrewCAD 中文" />
 <meta itemprop="name" content="概念">
 <meta itemprop="description" content="对软件中出现的名称、概念做确切定义和详细的介绍。适合作为用户手册，以备检索。
 ">
+
+<meta itemprop="wordCount" content="281">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="概念"/>
 <meta name="twitter:description" content="对软件中出现的名称、概念做确切定义和详细的介绍。适合作为用户手册，以备检索。
@@ -60,9 +65,30 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -119,7 +145,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="/en/docs/concepts/">English</a>
+	<a class="dropdown-item" href="/en/">English</a>
 	
 </div>
 			</li>
@@ -165,7 +191,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="/en/docs/concepts/">English</a>
+	<a class="dropdown-item" href="/en/">English</a>
 	
 </div>
     </div>
@@ -550,7 +576,7 @@ if (!doNotTrack) {
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsconcepts-li">
-    <a href="/docs/concepts/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="td-sidebar-nav-active-item">概念</span></a>
+    <a href="/docs/concepts/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-docsconcepts"><span class="td-sidebar-nav-active-item">概念</span></a>
     
   </li>
 
@@ -634,20 +660,37 @@ if (!doNotTrack) {
     
     
 
-    <a href="https://github.com/mjiao5151/mbrewlab/edit/master/content/zh/docs/Concepts/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
-    <a href="https://github.com/mjiao5151/mbrewlab/new/master/content/zh/docs/Concepts/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
+    <a href="https://github.com/mjiao5151/mbrewlab/edit/master/content/zh/docs/concepts.md" target="_blank"><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
+    <a href="https://github.com/mjiao5151/mbrewlab/new/master/content/zh/docs/concepts.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 添加子页面</a>
     <a href="https://github.com/mjiao5151/mbrewlab/issues/new?title=%e6%a6%82%e5%bf%b5" target="_blank"><i class="fab fa-github fa-fw"></i> 提交文档问题</a>
     
 
   
   
-    <a id="print" href="/docs/concepts/_print/"><i class="fa fa-print fa-fw"></i> 整节打印</a>
+    <a id="print" href="/docs/_print/"><i class="fa fa-print fa-fw"></i> 整节打印</a>
   
   </div>
 
 
 
 
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#初始比重">初始比重</a></li>
+    <li><a href="#终点比重">终点比重</a></li>
+    <li><a href="#ibu">IBU</a></li>
+    <li><a href="#bugu">BU:GU</a></li>
+    <li><a href="#srm">SRM</a></li>
+    <li><a href="#糖化力">糖化力</a></li>
+    <li><a href="#rbr">RBR</a></li>
+    <li><a href="#极限参数">极限参数</a></li>
+    <li><a href="#总效率">总效率</a></li>
+    <li><a href="#水料比">水料比</a></li>
+    <li><a href="#目标糖化ph">目标糖化pH</a></li>
+    <li><a href="#乳酸浓度">乳酸浓度</a></li>
+  </ul>
+</nav>
 
 
 
@@ -683,61 +726,138 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>概念</h1>
-        <div class="lead">对软件中出现的名称、概念做确切定义和详细的介绍。适合作为用户手册，以备检索。</div>
-	
-	
-        <div class="section-index">
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    
-</div>
+    <div class="lead">对软件中出现的名称、概念做确切定义和详细的介绍。适合作为用户手册，以备检索。</div>
+	       
+	<h2 id="初始比重">初始比重</h2>
+<p>初始比重（Original Gravity），常简写为OG，用来衡量麦汁中除去水分之外固态物的含量。
+初始比重是指麦汁经过煮沸后，发酵之前的比重。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+初始比重的衡量体系有两类：
+<strong>固含量</strong>体系，和<strong>相对密度</strong>体系。</p>
+<p><strong>固含量</strong>体系有Balling、Brix和Plato单位。
+Balling单位历史最长，Brix单位基于Balling单位，修正了其原有误差，很快淘汰了Balling单位。
+Brix单位的定义是在标准室温、大气压条件下，纯蔗糖溶液中蔗糖的质量百分比。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>Brix单位在红酒、水果和软饮领域应用很广。
+Plato单位和Balling单位的定义基本相同，差别是Plato单位的测量条件是20°C，而Balling单位则是在17.5°C。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>三个单位之间的数值差异很小，在日常酿造中可以互换使用。</p>
+<p><strong>相对密度</strong>实际上是一个无单位量。它是指在标准温度、标准大气压（STP，standard temperature and pressure）条件下待测物质的密度和纯水密度的比值。 我们知道STP条件下纯水的密度为1g/ml，假设麦汁的密度为1.040g/ml, 那么麦汁的相对密度即为 $\dfrac{1.040 g/ml}{1 g/ml} = 1.040$，单位在除法中被约去。</p>
+<p>英国酿酒工业习惯使用相对密度单位，例如10 Plato的麦汁用相对密度大约可以表示为1.040。
+在日常操作中，取小数点后两位，称之为<strong>比重点</strong>(Gravity Point)，例如1.050麦汁的比重点即为50。</p>
+<p>比重点和固含量单位之间的便捷转换方式为：<code>比重点 = 固含量单位 × 4</code></p>
+<p>这个简易公式存在一定误差，可在需要快速估算的情况下使用。</p>
+<p>本软件目前只支持相对密度单位的输入，计算结果输出支持Plato单位。</p>
+<h2 id="终点比重">终点比重</h2>
+<p>终点比重(Final Gravity)，常简写为FG。这个概念被创造时的初衷是为了衡量<strong>发酵结束后</strong>啤酒中剩余的不可发酵固态物的含量。</p>
+<p>实际情况是终点比重忽略了酒精降低啤酒密度的影响。<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>虽然如此，我们还是可以用它来指示发酵终点，粗略推算啤酒中残糖含量，以及估算啤酒的酒精度。</p>
+<h2 id="ibu">IBU</h2>
+<p>IBU, International Bitterness Units, 国际苦度值。IBU于1950-1960年间被开发并应用。经过多年演进，IBU目前的定义为啤酒中异构alpha-酸的浓度（依ppm计），例如一款啤酒中异构alpha-酸的浓度为15ppm，这款啤酒的IBU值为15。</p>
+<p>目前所有配方软件提供的IBU计算结果都是麦汁的IBU。经发酵后，麦汁IBU会大幅度降低，且结果无法准确预测。发酵后啤酒的IBU只能靠仪器测量或专业品酒师估算。
+影响啤酒苦度的因素还有很多，例如酒花中除了alpha-酸之外的其它物质，麦芽单宁，烘焙麦芽的焦糊味等。且麦汁的初始比重，发酵的终点比重都会影响消费者对啤酒苦度的感知。</p>
+<blockquote>
+<p>综合以上原因，IBU值对啤酒配方的设计有标示边界的指导性作用，但并不能用来准确预测啤酒的实际苦度。简言之，可以画靶，不能瞄点。</p>
+</blockquote>
+<p>麦汁IBU最常用的计算模型是Tinseth方程<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>。</p>
+<p>著名酿造<a href="https://alchemyoverlord.wordpress.com/">博客</a>优化了Tinseth模型，并将新模型命名为<a href="https://alchemyoverlord.wordpress.com/2015/05/12/a-modified-ibu-measurement-especially-for-late-hopping/">mIBU</a>。点击查看此模型的<a href="/blog/articles/mibu/">中文摘要</a>。</p>
+<p>本软件IBU的计算采用修改后的mIBU算法。</p>
+<h2 id="bugu">BU:GU</h2>
+<p><a href="#IBU">IBU</a>与<a href="#%E5%88%9D%E5%A7%8B%E6%AF%94%E9%87%8D">初始比重</a>的比值。初始比重采用比重点计量方式。</p>
+<p>BU:GU对啤酒的实际感官苦度预测，相对于IBU会更加准确。</p>
+<p>本软件“啤酒分类”区域会显示选中品类的BU:GU平均值，以供参考。用户也可在网站<a href="https://brookstonbeerbulletin.com/ibu-to-og-ratio-range-by-style/">Brookston Beer Bulletin</a>查找对应风格的BU:GU范围。</p>
+<h2 id="srm">SRM</h2>
+<p>啤酒的颜色常用SRM或EBC方法衡量。SRM和EBC的测量方法基本相同。SRM方法中，我们让一束430nm的光线通过1.27cm的待测啤酒样品，然后测量啤酒对光线的吸收率，然后将吸收率数据乘以10,即得到啤酒的SRM值。<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>如果只看这个定义，SRM方法的到的色读最大值为10，然而我们日常看到的啤酒SRM数据远远不只10。这是因为测量设备的敏感度局限，深色啤酒需要经过稀释才能测量到有效的吸收率数据，这时的SRM值需要把吸收率数据乘以10，再乘以稀释倍数。稀释倍数的引进使SRM的上限可以高于10。</p>
+<p>这里我们需要澄清的是，麦汁的SRM色度经过发酵后会有明显的降低，降低幅度通常可达到30%。色读降低的机制尚不确定，目前的理论有沉降，酵母还原等。而某些啤酒经过长期储存后，氧化作用又会使啤酒颜色加深。目前还没有数学模型可以准确估测色读变化的模式。</p>
+<p>需要提醒大家的是，<strong>目前的啤酒配方软件计算得到的SRM值均为麦汁色度。啤酒的SRM值需要通过实验测定。</strong></p>
+<h2 id="糖化力">糖化力</h2>
+<p>1833年，法国两位化学家Anselme Payen和Jean-Francois Persoz，首先从麦芽浸出物中提取出了一种固体物质，这种物质可以快速降低淀粉溶液的粘度。这两位化学家将这种物质命名为diastase，翻译为淀粉酶。后来发现这种物质是alpha-淀粉酶、beta-淀粉酶、极限糊精酶和alpha-葡糖苷酶等物质的混合物。改称这种物质为淀粉酶复合物（diastase complex）。由diastase这个概念引申出了糖化力（Diastatic Power, DP）的概念。<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>
+糖化力（DP)是衡量麦芽质量第二重要的指标，它衡量麦芽是否有足够的淀粉酶来完全转化糖化过程中的淀粉。在实际生产中，糖化力可以被看做麦芽中beta-淀粉酶含量的指标。</p>
+<p>设计啤酒配方时，糖化力指标至少要大于30,推荐值为70以上，以确保淀粉可以完全转化。</p>
+<h2 id="rbr">RBR</h2>
+<p>Relative Bitterness Ratio (RBR)，由知名精酿博客Mad Alchemist<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>开发的苦度衡量方法。
+它的计算方法如下：
+$$
+RBR = (BU:GU)(1 + (ADF - 0.7655))
+$$
+其中，<a href="#BU:GU">BU:GU</a>请翻看上方词条解释。ADF为表观发酵度，又称为表观降糖率，用来衡量啤酒残糖量。</p>
+<p>这个方法的合理之处在于它同时将初始比重和残糖对啤酒苦度的影响纳入考量。</p>
+<p>RBR的使用方法很简单，当此参数接近0.5时，我们认为啤酒的苦度是平衡的，高于0.5过多则认为过苦，反之则认为过甜。</p>
+<h2 id="极限参数">极限参数</h2>
+<p>极限参数是本软件首先推出的概念。这类参数包括“发酵度上限”，“ABV极限”，“F.G.极限”和“RBR极限”。</p>
+<p>极限参数排除了酵母性能的影响，只与糖化温度有关。
+我们知道，正常情况下，糖化温度决定了淀粉转化为可发酵糖的彻底程度，这个转化程度可以用<strong>麦汁发酵度</strong>（Fermentability）概念衡量。<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup> 如果糖化温度设定不合理，导致糖化产生的不可发酵糖含量过高，即便使用降糖率很高的酵母也无济于事。</p>
+<p>另一个是酵母的因素，不同酵母厂商所采用的酵母降糖率/发酵度测定方法和条件不统一，因此不同厂家给出的降糖率/发酵度数据之间不具有可比性。
+而且发酵液的初始浓度不同，酵母的表现也会不同。结论是，酵母厂商提供的发酵度（attenuation）数据不具备准确预测的意义。<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>
+目前的啤酒配方软件在计算ABV，FG等参数时，都会用到酵母厂商提供的降糖率/发酵度数据，这些参数常常跟实际结果有偏差。</p>
+<p>所以本软件引入极限参数体系，来充当配方设计流程的一种安全机制。它们可以在配方设计过程中给您提供更多逻辑推理的依据。</p>
+<h2 id="总效率">总效率</h2>
+<p>总效率（Brewhouse efficiency）用来衡量酿造设备对可发酵物中可转化物质（例如淀粉，可溶蛋白质等）的利用率。它衡量的起点是糖化开始时，终点是麦汁入发酵罐后。
+总效率是衡量设备性能，酿造流程合理性的重要指标。
+家酿设备的总效率通常在0.7-0.85左右，商酿设备可以做到0.95以上。</p>
+<h2 id="水料比">水料比</h2>
+<p>水料比（Mash thickness）是指糖化时，水和可发酵物的质量比。
+普通的单步糖化，水料比可设定在2-4区间内，建议2.5-3.2之间。</p>
+<h2 id="目标糖化ph">目标糖化pH</h2>
+<p>pH用来衡量溶液中氢离子的浓度。溶液中氢离子浓度每增加10倍，溶液pH值降低1个单位。
+目标糖化pH是指糖化流程开始后15-30分钟之后糖化液在STP条件下的pH值。常规啤酒的目标糖化pH建议保持在5.2-5.6之间，推荐区间为5.3-5.4。
+需要强调的是，在酿造过程中，酿造水的初始pH值是可以忽略的因素。麦芽中的可溶性物质会主宰糖化过程的pH。</p>
+<h2 id="乳酸浓度">乳酸浓度</h2>
+<p>我们可以通过向糖化液中添加乳酸、磷酸、稀硫酸和柠檬酸等物质来调节糖化液的pH值。</p>
+<p>我们推荐使用乳酸或酸化麦芽（有效成分为乳酸）。为了解释我们的用意，需要引入<strong>pH缓冲</strong>的概念。
+为了直观解释pH缓冲概念，我们借用著名酿造维基网站<a href="http://braukaiser.com/wiki/index.php/A_simple_Model_for_pH_Buffers">braukaiser.com</a>的解释模型。
+<img src="http://braukaiser.com/wiki/images/d/d3/PH_buffer_analogy.gif" alt="">
+如上图的管道模型，我们把酸碱量的变动想象成往管道中注入或抽取液体。pH缓冲就相当与在某个<strong>pH点位</strong>筑造了一个蓄水池，能够有效的抵御酸、碱量在<strong>这个pH
+区间</strong>内对pH值的影响。
+这个<strong>pH点位</strong>由加入酸的pKa值决定。乳酸的pKa值为3.1和4.8，它在pH为3.1和4.8两个位置的pH缓冲能力最强。有够有效的将系统pH保持在这个区间内。
+作为对比，磷酸的pKa为2.1和7.2。磷酸的缓冲点为对于啤酒来说就不如乳酸友好。这么说是因为啤酒成品也有pH要求，比如艾尔的标准pH区间为3.8-4.2，而拉格的pH区间为4.2-4.75。<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup> 与乳酸的缓冲区间重合，却完全脱离了磷酸的缓冲区间。</p>
+<p>所以我们建议使用乳酸作为糖化pH的调节剂。需要注意的是，乳酸的平均味觉阈值为400ppm，也就是说当成品啤酒中乳酸浓度在400ppm以下时，<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>绝大部分消费者品尝不出乳酸的存在。<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Oliver, Garrett, and Tom Colicchio. The Oxford Companion to Beer. The Oxford Companion to Beer. Oxford University Press, 2013. &ldquo;Orginal Gravity&rdquo;, <a href="https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133">https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://www.mt.com/gb/en/home/perm-lp/product-organizations/ana/brix-meters.html">https://www.mt.com/gb/en/home/perm-lp/product-organizations/ana/brix-meters.html</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Oliver, Garrett, and Tom Colicchio. The Oxford Companion to Beer. The Oxford Companion to Beer. Oxford University Press, 2013. &ldquo;Plato gravity scale&rdquo;, <a href="https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133">https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133</a>. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Oliver, Garrett, and Tom Colicchio. The Oxford Companion to Beer. The Oxford Companion to Beer. Oxford University Press, 2013. &ldquo;Final Gravity&rdquo;, <a href="https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133">https://www.oxfordreference.com/view/10.1093/acref/9780195367133.001.0001/acref-9780195367133</a>. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="http://www.realbeer.com/hops/research.html">http://www.realbeer.com/hops/research.html</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>ASBC Methods of Analysis. “ASBC Methods of Analysis.”, Accessed April 16, 2021. <a href="https://www.asbcnet.org/Methods/Methods/Beer-10.pdf">https://www.asbcnet.org/Methods/Methods/Beer-10.pdf</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>Palmer, G.H. “Cereals in malting and brewing.” In: Cereal science and technology, ed. G.H. Palmer. 61–242. Aberdeen, Scotland: Aberdeen University Press, 1989. <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="http://www.madalchemist.com/relative_bitterness.html">http://www.madalchemist.com/relative_bitterness.html</a> <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="http://braukaiser.com/wiki/index.php/Effects_of_mash_parameters_on_fermentability_and_efficiency_in_single_infusion_mashing">http://braukaiser.com/wiki/index.php/Effects_of_mash_parameters_on_fermentability_and_efficiency_in_single_infusion_mashing</a> <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p><a href="http://braukaiser.com/wiki/index.php/Understanding_Attenuation">http://braukaiser.com/wiki/index.php/Understanding_Attenuation</a> <a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p>MacWilliam, I.C., Hudson, J.R. &amp; Whitear, A.L. (1963). Wort from green malt and unmalted cereals. J. Inst. Brew. 69: 303- 308 <a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p>Dennis E. Briggs, Chris A. Boulton, Peter A. Brookes, Roger Stevens, Brewing Science and Practice, Published by Woodhead Publishing, 2004 <a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13" role="doc-endnote">
+<p><a href="http://braukaiser.com/wiki/index.php/Lactate_Taste_Threshold_experiment">http://braukaiser.com/wiki/index.php/Lactate_Taste_Threshold_experiment</a> <a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">最后修改 2021.03.29: <a  href="https://github.com/mjiao5151/mbrewlab/commit/57826ca442d4047ca670c53d469aa0da4f223abd">Updating theme submodule (57826ca)</a>
+	<div class="text-muted mt-5 pt-3 border-top">最后修改 0001.01.01
 </div>
 </div>
+
 
           </main>
         </div>

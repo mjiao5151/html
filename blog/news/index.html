@@ -57,7 +57,28 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="td-section td-blog">
     <header>
@@ -256,6 +277,57 @@ if (!doNotTrack) {
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogreleaseschangelog-li">
     <a href="/blog/releases/changelog/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-blogreleaseschangelog"><span class="">更新记录</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogarticles-li">
+    <a href="/blog/articles/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-blogarticles"><span class="">酿造专题</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogarticlesmibu-li">
+    <a href="/blog/articles/mibu/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-blogarticlesmibu"><span class="">mIBU苦度算法</span></a>
     
   </li>
 

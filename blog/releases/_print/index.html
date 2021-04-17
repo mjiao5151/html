@@ -57,7 +57,28 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="td-section td-blog">
     <header>
@@ -213,7 +234,10 @@ if (!doNotTrack) {
 		<time datetime="2021-04-14" class="text-muted">2021.04.14</time>
         
 	</div>
-	<h2 id="v101">V1.0.1</h2>
+	<h2 id="文档更新">文档更新</h2>
+<p>更新日期：2021/04/17
+中文文档“概念”章节初步完成。</p>
+<h2 id="v101">V1.0.1</h2>
 <p>更新日期：2021/04/15</p>
 <p>发酵物配比算法重要更新。新增“麦芽锁”机制，大幅提高发酵物配比计算的自动化程度。</p>
 <p><a href="/docs/getting-started/tabs/fermentable/">详情</a></p>

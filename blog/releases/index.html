@@ -57,7 +57,28 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="td-section td-blog">
     <header>
@@ -267,6 +288,57 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blogarticles-li">
+    <a href="/blog/articles/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-blogarticles"><span class="">酿造专题</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogarticlesmibu-li">
+    <a href="/blog/articles/mibu/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-blogarticlesmibu"><span class="">mIBU苦度算法</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -339,7 +411,8 @@ if (!doNotTrack) {
 
 
 
-						<p class="pt-0 mt-0">V1.0.1 更新日期：2021/04/15
+						<p class="pt-0 mt-0">文档更新 更新日期：2021/04/17 中文文档“概念”章节初步完成。
+V1.0.1 更新日期：2021/04/15
 发酵物配比算法重要更新。新增“麦芽锁”机制，大幅提高发酵物配比计算的自动化程度。
 详情
 V1.0.0 更新日期：2021/04/01

@@ -59,7 +59,28 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="td-home">
     <header>
@@ -186,8 +207,10 @@ if (!doNotTrack) {
 
 <a class="btn btn-link text-info" href="#td-block-1"><i class="fa fa-chevron-circle-down" style="font-size: 400%"></i></a>
 
-	<p class="lead mt-5">2021/04/15： 重要功能更新, 引进<a style="color:Lime;" href="/docs/getting-started/tabs/fermentable/">“麦芽锁”</a>机制。
-		<br>当前版本: V1.0.1
+	<p class="lead mt-5">
+		当前版本: V1.0.1 
+		<br>2021/04/17： 中文文档<a style="color:Cyan;" href="/docs/concepts/">“概念”</a>章节更新。
+		<br>2021/04/15： 重要功能更新, 引进<a style="color:Cyan;" href="/docs/getting-started/tabs/fermentable/">“麦芽锁”</a>机制。
 	</p>
 	
 </div>

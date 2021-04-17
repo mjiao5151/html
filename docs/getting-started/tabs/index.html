@@ -60,7 +60,28 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="td-section">
     <header>
@@ -550,7 +571,7 @@ if (!doNotTrack) {
   
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconcepts-li">
-    <a href="/docs/concepts/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">概念</span></a>
+    <a href="/docs/concepts/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-docsconcepts"><span class="">概念</span></a>
     
   </li>
 
@@ -743,14 +764,14 @@ if (!doNotTrack) {
             
         
             
+        
+            
                 <div class="entry">
                     <h5>
                         <a href="/docs/getting-started/tabs/hop/">啤酒花</a>
                     </h5>
                     <p>介绍如何使用该软件计算设备的降温曲线，如何计算啤酒花添加量。</p>
                 </div>
-            
-        
             
         
             

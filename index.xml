@@ -13,6 +13,274 @@
     
     
     <item>
+      <title>Blog: mIBU: 一种啤酒苦度算法</title>
+      <link>/blog/articles/mibu/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/articles/mibu/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;摘要&#34;&gt;摘要&lt;/h5&gt;
+&lt;p&gt;常规IBU计算方法将关火后投放酒花的IBU贡献值计为零。这与酿酒实践相矛盾。实际上，关火后投放的酒花所贡献的IBU不容忽视。本文介绍了一种针对后投酒花苦度计算的方法，此方法本质上是基于Tinseth公式的修正，修正后的算法命名为mIBU（maximum IBU），命名原因见后文。&lt;/p&gt;
+&lt;h5 id=&#34;问题&#34;&gt;问题&lt;/h5&gt;
+&lt;p&gt;标准的IBU计算公式，比如Tinseth公式，將关火后投放酒花的IBU贡献值视为零。这与实践经验相左。
+实际操作中，不同的酿造系统，不同的操作方法都为对后投酒花的IBU产生巨大的影响。通过对许多网络文献的分析，我们发现后投酒花（包括关火后和旋沉投放）的利用率在10%-30%之间，其中的变量和各种关系我们并不清楚，所以问题就是我们如何建造一个数学模型用来预测后投酒花的IBU贡献值。&lt;/p&gt;
+&lt;h5 id=&#34;解决方案&#34;&gt;解决方案&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;途径&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;酒花利用率随温度的降低而降低，它与温度的变化关系遵从&lt;a href=&#34;https://en.wikipedia.org/wiki/Arrhenius_equation&#34;&gt;Arrhenius equation&lt;/a&gt;『注：阿伦尼乌斯方程，经验公式，用来描述一种化学反应速率和温度之间的关系。』多处文献指出，酒花率用率在79-85摄氏度时趋于零。可以肯定的是，在停止对
+麦汁的加热后，麦汁降温需要一定的时间。酒花的利用率跟降温速率直接相关，降温越慢酒花的利用率越高。我们要做的是修正Tinseth的IBU计算公式，将温度对酒花率用的影响纳入计算。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tinseth IBU公式&lt;/em&gt;
+Tinseth公式在大部分应用情境下的预测都比较准确，具体公式如下：
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 226px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/tinseth_hu5a919a51b5090d87dfa90f02538d04c8_28858_300x300_fit_q90_catmullrom.jpg&#34; width=&#34;216&#34; height=&#34;234&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;在公式里$U(BG,t_1)$代表酒花利用率，它是煮沸比重BG『注：煮沸比重在次文中为煮沸前比重和煮沸后比重的平均值，原文作者并未说明，但在相关文章中有做解释。』和煮沸时间的方程。
+$D(AA,W,V)$代表麦汁中的alpha酸浓度，单位为mg/L，它是酒花种alpha酸，酒花重量和麦汁体积的方程。
+b(BG)我们称其为“大小因子”，它是煮沸比重（BG）的方程。
+f($t_1$)我们称其为“时间因子”，它是时间（单位为min）的方程，我们用它来预测alpha酸的异构化程度。
+AA表示酒花种alpha酸的百分比含量，W表示酒花重量（单位为g），V表示麦汁体积（单位为L）。$t_1$代表煮沸时间。
+在这里，我们相信利用率$U(BG,t_1)$不仅是煮沸比重BG和时间$t_1$的方程，如前所述，它会随着温度的下降而降低，这个关系并没有体现在现有公式中。利用率是一个无单位数字，小于等于1，一般在0.3以下。利用率的定义为最终进入成品啤酒中的异构化alpha酸相对于投放入麦汁中的alpha酸的比例。在Tinseth公式中，IBU与利用率和异构alpha酸的关系是线性的，这是一种过度简化。实际情况下，氧化的alpha，beta酸和多酚等物质都会对IBU造成影响。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;利用率曲线&lt;/em&gt;
+下图为公式（2）中利用率$U(BG,t_1)$以时间为变量的曲线图。不同颜色代表不同的煮沸密度BG，详情见图例。曲线反映了累积的alpha酸转化与利用。
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 653px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure2_utilization_hu322bf5c17e5f63d55d3240c6c9c764d8_17605_700x500_fit_catmullrom_2.png&#34; width=&#34;643&#34; height=&#34;447&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+利用率-时间曲线
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;即时利用率&lt;/em&gt;
+在利用率曲线上求导，即得即时利用率。这个值的有用之处在于我们可以在其定义域内任意区间积分，即可得到该区间（或该时间段）内的利用率。&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 663px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure3_derivative_ofutilizatio_hu3bfab70bd01a5612ca004c66d9401b14_25077_700x500_fit_catmullrom_2.png&#34; width=&#34;653&#34; height=&#34;448&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+利用率曲线求倒
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;我们拿BG=1.060曲线举例，假设我们想知道煮沸40分钟时的利用率，只需对上图BG=1.060曲线在0-40之间积分即可，积分值对应曲线下方和坐标轴围成的面积，即下图绿色区域面积。
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 659px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure4_area_underinstantutilization4_hu3fa79c8859879f453dd8fcfc111e9cb0_5740_700x500_fit_catmullrom_2.png&#34; width=&#34;649&#34; height=&#34;445&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+积分
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;如果我们想知道40-50分钟之间的利用率，我们只需在40-50间积分即可：&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 663px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure5_area2_underinstantutilization40to502_hu22b0cd7ab86fbaefc69fc852b2dc8e34_5005_700x500_fit_catmullrom_2.png&#34; width=&#34;653&#34; height=&#34;450&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;多余的利用率&lt;/em&gt;
+假设我们计划煮沸酒花40分钟，但我们忘记了关火冷却，多煮了10分钟，这时我们立即冷却麦汁，此时的酒花利用率于煮沸50分钟相当：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 651px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure6_area3_underinstantutilization0to502_hub300344e71a5883c4279a9a9660848af_6284_700x500_fit_catmullrom_2.png&#34; width=&#34;641&#34; height=&#34;446&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+假设我们在40分钟线准时关火冰冷确麦汁，但现实经验告诉我们，麦汁降温需要时间，在高温段酒花的利用率仍旧在增加，只是增量不会有上图蓝色区域显示的那么高。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;利用率与温度和时间的关系&lt;/em&gt;
+（译者按：本段落中所用数据并无特殊意义，只是为了方便说明过程。）
+假设我们有6G（加仑）麦汁，从煮沸关火时开始每个一分钟测量一次温度，以时间为横坐标标点绘图并做线性拟合：&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 710px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure7_t_drop_huf3d5d92971fda32585df41fb7f78c164_18269_700x500_fit_catmullrom_2.png&#34; width=&#34;700&#34; height=&#34;456&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;在此例中，得温度方程$T(t_2) = -1.344t_2 + 210.64$, 此处T为温度，单位为Fahrenheit(华氏度），$t_2$为关火后时间，单位为分钟。
+若以摄氏度为温度单位，得方程$T(t_2) = -0.74667t_2 + 99.244$
+总结以下，此步骤我们希望通过实验数据拟合出描述系统降温速率的公式：
+$T(t_2) = -a t_2 + b $
+其中，a表示降温速率，b表示起始温度。
+下一步，我们需要一个描述利用率与温度之间关系的方程。为了方便，我们定义相对利用率$U_r (T)$，当T=100摄氏度时（煮沸时），$U_r (100) = 1$。从&lt;a href=&#34;https://alchemyoverlord.wordpress.com/2016/03/06/an-analysis-of-sub-boiling-hop-utilization/&#34;&gt;这篇文章&lt;/a&gt;的分析中我们得知
+$$
+U_r(T) = 2.39×10^{11} e^\frac{-9773}{T}
+$$
+此处T的单位为Kelvin。
+将$T(t_2)$代入相对利用率公式
+$$
+U_r (t_2) = 2.39 \times 10^{11} e^\frac{-9773}{(\frac{5}{9})(-a t_2 + b) + 459.67}
+$$
+做图得如下曲线：&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 710px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure8_relative_utilization_hu2a1b07f2521da667c549130f4ab2fc4f_11793_700x500_fit_catmullrom_2.png&#34; width=&#34;700&#34; height=&#34;430&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;综合以上公式&lt;/em&gt;
+综合上述公式，我们的到关火后降温前的酒花即时利用率公式：
+$$
+d(BG,t_1)/dt_1 = U_r (t_1 - t_f) \times 1.65 \times 0.000125^{(BG-1)} \times \frac{0.04 e ^{-0.04 \times t_1}}{4.15}
+$$&lt;/p&gt;
+&lt;p&gt;我们回到之前40分钟关火的例子，套用以上公式，得下图：&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 710px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/articles/mibu/figure9_hu7f0e7612af292eb7b1a983f12661c462_11637_700x500_fit_catmullrom_2.png&#34; width=&#34;700&#34; height=&#34;466&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;对比前图可发现，40分钟关火后利用率下降，但不为0.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;针对非异构alpha酸物质的IBU估算&lt;/em&gt;
+非异构alpha酸物质，比如氧化Alpha，beta酸，多酚物质对IBU的贡献并不随麦汁温度和时间而变化，它们入酒后几乎是即时释放，并升高IBU。
+我们可以利用Tinseth公式估算非异构alpha酸物质对IBU的贡献，简单套用Tinseth公式，取前5分钟的IBU计算值即可。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;伪码&lt;/em&gt;
+『注：伪码中某些参数须根据使用者系统实测结果调整。』&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// the following code assumes we know the boil gravity (BG), boil volume
+// (volume_gallons, in gallons), the weight of hops added (hopsWeight_oz,
+// in ounces), the AA value of the hops (AA, in percent, with values from 
+// 0 to 100), the time of the hops in the boil (boilTime_min, in minutes), 
+// and when (relative to flameout) there is forced cooling (coolTime_min, in
+// minutes.)  The forced cooling is assumed here to be instantaneous.
+// There are hard-coded functions that express (a) decrease in temperature 
+// as a function of time after flameout and (b) relative utilization as a 
+// function of temperature.
+// Note that temperature is measured in Fahrenheit, not Celsius.
+volume_liters = volume_gallons * 3.78541;
+hopsWeight_grams = hopsWeight_oz * 28.3495;
+AA_maxOne = AA / 100.0;
+boilUtilization = computeBoilUtilization(boilTime_min, BG);
+postBoilUtilization = computePostBoilUtilization(boilTime_min, BG, coolTime_min);
+totalUtilization = boilUtilization + postBoilUtilization;
+IBU = (totalUtilization * AA_maxOne * hopsWeight_grams * 1000.0) /
+       volumeLiters;
+print(&amp;quot;total IBUs, including post-flameout, is %f\n&amp;quot;, IBU);
+
+procedure computeBoilUtilization(boilTime_min, BG) {
+  bignessFactor = 1.65 * pow(0.000125, (BG-1.0));
+  boilTimeFactor = (1.0 - exp(-0.04 * boilTime_min)) / 4.15;
+  decimalAArating = bignessFactor * boilTimeFactor;
+  return(decimalAArating);
+}
+
+// The formula for temp_degF can (and should) be updated to reflect 
+// a brewer&#39;s observed temperature decrease after flameout.  
+procedure computePostBoilUtilization(boilTime_min, BG, coolTime_min) {
+  integrationTime = 0.001;
+  decimalAArating = 0.0;
+  for (t = boilTime_min; t &amp;lt; boilTime_min + coolTime_min; t = t + integrationTime) {
+    dU = -1.65 * pow(0.000125, (BG-1.0)) * -0.04 * exp(-0.04*t) / 4.15;
+    temp_degF = (-1.344 * (t - boilTime_min)) + 210.64;
+    temp_degK = (temp_degF + 459.67) * (5.0/9.0);
+    degreeOfUtilization = 2.39*pow(10.0,11.0)*exp(-9773.0/temp_degK);
+    if (t &amp;lt; 5.0) degreeOfUtilization = 1.0;  // account for nonIAA components
+    combinedValue = dU * degreeOfUtilization;
+    decimalAArating += combinedValue * integrationTime;
+    }
+  }
+  return(decimalAArating);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;例子省略。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://alchemyoverlord.wordpress.com/2015/05/12/a-modified-ibu-measurement-especially-for-late-hopping/?nsukey=ZEUansuct2eRoozMJTqKnrbN0q6o37MffwFHqfpAuNij%2BKI8%2B75y1T1PF2E%2FxgvdZrCTE1ZNQre%2BL4kHGgvKUAYcbxx3WgF%2FLSVnzur6q%2Fmw0IyU8ZfINNtARlE%2F3CxAQFWZZqmlxHgdvWS2wxEoLglKI2MfTTg15%2B36zlHfoiopnTYSzeQJmD8J9QGpQfG3&#34;&gt;原文地址&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: 更新记录</title>
       <link>/blog/releases/changelog/</link>
       <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
@@ -21,7 +289,10 @@
       <description>
         
         
-        &lt;h2 id=&#34;v101&#34;&gt;V1.0.1&lt;/h2&gt;
+        &lt;h2 id=&#34;文档更新&#34;&gt;文档更新&lt;/h2&gt;
+&lt;p&gt;更新日期：2021/04/17
+中文文档“概念”章节初步完成。&lt;/p&gt;
+&lt;h2 id=&#34;v101&#34;&gt;V1.0.1&lt;/h2&gt;
 &lt;p&gt;更新日期：2021/04/15&lt;/p&gt;
 &lt;p&gt;发酵物配比算法重要更新。新增“麦芽锁”机制，大幅提高发酵物配比计算的自动化程度。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;/docs/getting-started/tabs/fermentable/&#34;&gt;详情&lt;/a&gt;&lt;/p&gt;

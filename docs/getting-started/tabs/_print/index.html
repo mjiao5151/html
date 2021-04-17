@@ -60,7 +60,28 @@ if (!doNotTrack) {
 
 
 
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="td-section">
     <header>
@@ -328,16 +349,16 @@ if (!doNotTrack) {
 	<h1 id="pg-6f86f151d692be7ef88c77f397eb7717">2 - 可发酵物</h1>
     <div class="lead">介绍各标签页的功能和使用方法。</div>
 	<h2 id="2可发酵物">2.可发酵物</h2>
-<p><img src="http://brewcad.beer/public/images/tab-fermentables.gif" alt="可发酵物标签页"></p>
+<p><img src="http://brewcad.beer/public/images/tab-fermentables.apng" alt="可发酵物标签页"></p>
 <p>点击标题为“选择谷物”的下拉选择框，滚动鼠标或键入关键词搜索想要使用的麦芽品种。</p>
-<p>重复以上操作，选出配方所需要的全部麦芽品种。</p>
+<p>重复以上操作，选出配方所需要的全部物料品种。</p>
 <p>点击“推荐”按钮，软件会根据所选麦芽的 <strong>淀粉酶含量</strong>，用户设定的<strong>初始比重</strong>，
-<strong>麦汁SRM色度</strong>等条件，生成麦芽推荐用量表。此麦芽用量配比为最节约麦芽的方案。</p>
+<strong>麦汁SRM色度</strong>等条件，生成麦芽推荐用量表。此麦芽配比为最节约麦芽的方案。</p>
 <blockquote>
-<p>提示：表中蓝色背景单元格为可编辑区域，白色背景则为只读区域。本软件出现所有表格均依此例。</p>
+<p>提示：表中蓝色背景单元格为可编辑区域，白色背景为只读区域。本软件出现所有表格均依此例。</p>
 </blockquote>
 <p>一个客观现实是，算法无法量化风味，所以需要人工对推荐方案做最后的调整。</p>
-<p>BrewCAD在V1.0.1版更新中首次发布了“麦芽锁”机制，在引入必要人工干预的前提下，还能最大程度利用自动化算法带来的便捷性。</p>
+<p>BrewCAD在V1.0.1版本更新中首次发布了“麦芽锁”机制，在引入必要人工干预的前提下，还能最大程度利用自动化算法带来的便捷性。</p>
 <p>该机制的使用方法如图所示，
 在系统推荐的麦芽用量表左侧有一列复选框，用户可以用每行对应的选择框锁定特定麦芽品种的用量。
 然后点击“优化”按钮，系统将根据新条件重新估算未锁定麦芽品种的用量。
