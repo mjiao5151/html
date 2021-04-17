@@ -762,9 +762,9 @@ Plato单位和Balling单位的定义基本相同，差别是Plato单位的测量
 <p>BU:GU对啤酒的实际感官苦度预测，相对于IBU会更加准确。</p>
 <p>本软件“啤酒分类”区域会显示选中品类的BU:GU平均值，以供参考。用户也可在网站<a href="https://brookstonbeerbulletin.com/ibu-to-og-ratio-range-by-style/">Brookston Beer Bulletin</a>查找对应风格的BU:GU范围。</p>
 <h2 id="srm">SRM</h2>
-<p>啤酒的颜色常用SRM或EBC方法衡量。SRM和EBC的测量方法基本相同。SRM方法中，我们让一束430nm的光线通过1.27cm的待测啤酒样品，然后测量啤酒对光线的吸收率，然后将吸收率数据乘以10,即得到啤酒的SRM值。<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>如果只看这个定义，SRM方法的到的色读最大值为10，然而我们日常看到的啤酒SRM数据远远不只10。这是因为测量设备的敏感度局限，深色啤酒需要经过稀释才能测量到有效的吸收率数据，这时的SRM值需要把吸收率数据乘以10，再乘以稀释倍数。稀释倍数的引进使SRM的上限可以高于10。</p>
-<p>这里我们需要澄清的是，麦汁的SRM色度经过发酵后会有明显的降低，降低幅度通常可达到30%。色读降低的机制尚不确定，目前的理论有沉降，酵母还原等。而某些啤酒经过长期储存后，氧化作用又会使啤酒颜色加深。目前还没有数学模型可以准确估测色读变化的模式。</p>
-<p>需要提醒大家的是，<strong>目前的啤酒配方软件计算得到的SRM值均为麦汁色度。啤酒的SRM值需要通过实验测定。</strong></p>
+<p>啤酒的颜色常用SRM或EBC方法衡量。SRM和EBC的测量方法基本相同。SRM方法中，我们让一束波长为430nm的光线通过1.27cm的待测啤酒样品，然后测量啤酒对光线的吸收率，然后将吸收率数据乘以10,即得到啤酒的SRM值。<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>如果只看这个定义，SRM方法的到的色度最大值为10，然而我们日常看到的啤酒SRM数据远远不只10。这是因为测量设备的敏感度局限，深色啤酒需要经过稀释才能测量到有效的吸收率数据，这时，要得到SRM值，我们需要把吸收率数据乘以10，再乘以稀释倍数。稀释倍数的引进使SRM的上限可以高于10。</p>
+<p>这里我们需要澄清的是，麦汁的SRM色度经过发酵后会有明显的降低，降低幅度通常可达到30%。色度降低的机制尚不确定，目前的理论有沉降，酵母还原等。而某些啤酒经过长期储存后，氧化作用又会使啤酒颜色加深。目前还没有数学模型可以准确估测色度变化的模式。</p>
+<p>需要提醒大家的是，<strong>目前的啤酒配方软件计算得到的SRM值均为麦汁色度。啤酒的实际SRM值需要通过实验测定。</strong></p>
 <h2 id="糖化力">糖化力</h2>
 <p>1833年，法国两位化学家Anselme Payen和Jean-Francois Persoz，首先从麦芽浸出物中提取出了一种固体物质，这种物质可以快速降低淀粉溶液的粘度。这两位化学家将这种物质命名为diastase，翻译为淀粉酶。后来发现这种物质是alpha-淀粉酶、beta-淀粉酶、极限糊精酶和alpha-葡糖苷酶等物质的混合物。改称这种物质为淀粉酶复合物（diastase complex）。由diastase这个概念引申出了糖化力（Diastatic Power, DP）的概念。<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>
 糖化力（DP)是衡量麦芽质量第二重要的指标，它衡量麦芽是否有足够的淀粉酶来完全转化糖化过程中的淀粉。在实际生产中，糖化力可以被看做麦芽中beta-淀粉酶含量的指标。</p>
@@ -802,10 +802,10 @@ $$
 <p>我们推荐使用乳酸或酸化麦芽（有效成分为乳酸）。为了解释我们的用意，需要引入<strong>pH缓冲</strong>的概念。
 为了直观解释pH缓冲概念，我们借用著名酿造维基网站<a href="http://braukaiser.com/wiki/index.php/A_simple_Model_for_pH_Buffers">braukaiser.com</a>的解释模型。
 <img src="http://braukaiser.com/wiki/images/d/d3/PH_buffer_analogy.gif" alt="">
-如上图的管道模型，我们把酸碱量的变动想象成往管道中注入或抽取液体。pH缓冲就相当与在某个<strong>pH点位</strong>筑造了一个蓄水池，能够有效的抵御酸、碱量在<strong>这个pH
-区间</strong>内对pH值的影响。
-这个<strong>pH点位</strong>由加入酸的pKa值决定。乳酸的pKa值为3.1和4.8，它在pH为3.1和4.8两个位置的pH缓冲能力最强。有够有效的将系统pH保持在这个区间内。
-作为对比，磷酸的pKa为2.1和7.2。磷酸的缓冲点为对于啤酒来说就不如乳酸友好。这么说是因为啤酒成品也有pH要求，比如艾尔的标准pH区间为3.8-4.2，而拉格的pH区间为4.2-4.75。<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup> 与乳酸的缓冲区间重合，却完全脱离了磷酸的缓冲区间。</p>
+如上图的管道模型，我们把酸碱量的变动想象成往管道中注入或抽取液体。pH缓冲就相当与在某个<strong>pH点位</strong>筑造了一个蓄水池，能够有效的抵御酸、碱量的变动在<strong>这个pH
+区间</strong>内对系统pH值的影响。
+这个<strong>pH点位</strong>由加入酸的pKa值决定。乳酸的pKa值为3.1和4.8，它在pH为3.1和4.8两个位置的pH缓冲能力最强，能够有效的将系统pH保持在这个区间内。
+作为对比，磷酸的pKa为2.1和7.2。磷酸的缓冲点位对于啤酒来说就不如乳酸友好。这么说是因为我们对啤酒成品的pH值有严格要求，比如艾尔的标准pH区间为3.8-4.2，而拉格的pH区间为4.2-4.75。<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup> 啤酒的pH值标准与乳酸的缓冲区间重合，但是完全脱离了磷酸的缓冲区间。</p>
 <p>所以我们建议使用乳酸作为糖化pH的调节剂。需要注意的是，乳酸的平均味觉阈值为400ppm，也就是说当成品啤酒中乳酸浓度在400ppm以下时，<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>绝大部分消费者品尝不出乳酸的存在。<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup></p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
