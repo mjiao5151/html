@@ -18,6 +18,10 @@
   </url>
   
   <url>
+    <loc>/docs/tutorials/brewdog-libertine_black_ale/</loc>
+  </url>
+  
+  <url>
     <loc>/docs/getting-started/main-interface/</loc>
     <lastmod>2021-03-29T16:16:28+08:00</lastmod>
     <xhtml:link
@@ -202,21 +206,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="/docs/tutorials/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/reference/</loc>
-    <lastmod>2021-03-29T16:16:28+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/docs/reference/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/docs/reference/"
                 />
   </url>
   

@@ -289,7 +289,11 @@ procedure computePostBoilUtilization(boilTime_min, BG, coolTime_min) {
       <description>
         
         
-        &lt;h2 id=&#34;文档更新&#34;&gt;文档更新&lt;/h2&gt;
+        &lt;h2 id=&#34;bug修复&#34;&gt;bug修复&lt;/h2&gt;
+&lt;p&gt;更新日期：2021/04/21
+“麦芽锁”功能bug修复。
+增加Extra Pale麦芽数据；增加水化学例子配比数据。&lt;/p&gt;
+&lt;h2 id=&#34;文档更新&#34;&gt;文档更新&lt;/h2&gt;
 &lt;p&gt;更新日期：2021/04/17
 中文文档“概念”章节初步完成。&lt;/p&gt;
 &lt;h2 id=&#34;v101&#34;&gt;V1.0.1&lt;/h2&gt;
